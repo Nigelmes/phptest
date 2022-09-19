@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Avtor extends Model
 {
+    protected $fillable = ['uuid', 'tittle'];
     use HasFactory;
 }
