@@ -13,10 +13,16 @@ class BookController extends Controller
         return view('book.index', compact('books'));
     }
 
-    public function update() {
-        $pp = Book::all();
-        dd($pp);
+    public function create() {
+        return view('book.create');
+    }
 
+    public function store() {
+        $data = \request()->validate([
+            'ID' => "integer",
+            'title' => "string",
+        ]);
+        dd($data);
     }
 
 }
