@@ -10,7 +10,7 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::all();
-        return view('books', compact('books'));
+        return view('book.index', compact('books'));
     }
 
     public function update() {

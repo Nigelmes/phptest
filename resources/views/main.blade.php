@@ -8,9 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-@foreach($books as $ff)
-  <div>  {{ $ff->uuid }} {{ $ff->title }}</div>
-
-@endforeach
+<div>
+    @yield('content')
+</div>
 </body>
 </html>
