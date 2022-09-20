@@ -19,10 +19,11 @@ class BookController extends Controller
 
     public function store() {
         $data = \request()->validate([
-            'ID' => "integer",
+            'uuid' => "integer",
             'title' => "string",
         ]);
-        dd($data);
+        Book::create($data);
+        return redirect()->route('book.index');
     }
 
 }

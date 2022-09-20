@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->uuid('uuid')->nullable();
+            $table->integer('uuid')->nullable();
             $table->string('title');
             $table->timestamps();
         });

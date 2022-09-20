@@ -1,11 +1,11 @@
 @extends('main')
 @section('content')
 
-    <form action="{{ route('post.store') }}" method="post">
+    <form action="{{ route('book.store') }}" method="post">
         @csrf
         <div class="mb-3">
-            <label for="uuid" class="form-label">ID</label>
-            <input type="text" name="ID" class="form-control" id="uuid"
+            <label for="uuid" class="form-label">Количество книг</label>
+            <input type="text" name="uuid" class="form-control" id="uuid"
         </div>
         <div class="mb-3">
             <label for="title" class="form-label">Название книги</label>

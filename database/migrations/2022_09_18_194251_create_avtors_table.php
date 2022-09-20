@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('avtors', function (Blueprint $table) {
             $table->id();
-            $table->uuid('uuid')->nullable();
             $table->string('title');
             $table->timestamps();
         });
