@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/admin', function () {
+//    return view('admin', 'BookController');
+//});
+Route::get('/book', [BookController::class, 'index']);
+Route::get('/book/create', [BookController::class, 'create']);
+Route::get('/book/update', [BookController::class, 'update']);
